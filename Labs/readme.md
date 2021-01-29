@@ -1,21 +1,28 @@
 # Lab Setup
 
 ## Infrastructure
-Your infrastructure can really be hosted anywhere.
-- Locally via vmware, virtualbox, etc
-- In the cloud via Azure, GCP, AWS
-- Prod? (j/k)
+- Your infrastructure can really be hosted anywhere.
+_Locally via vmware, virtualbox, etc
+_In the cloud via Azure, GCP, AWS
+_Prod? (j/k)
+
+- They should be in all the same network 
 
 ### 1. Windows Domain Controller
+- Specs
+_ supported OS version
+_ 
 
 ### 2. Windows Endpoint
+- Joined to above domain
+- Download and install [Wireshark](https://www.wireshark.org/)
 ### 3. Kali Linux
 ### 4. Optional - Whatever you need for SIEM?
 In my case you will see in the demos that I'm using a Blumira sensor. This is an Ubuntu box with a docker container that has a [Blumira](https://www.blumira.com) sensor installed on it. Because this isn't a SIEM training, it's difficult to go through a full lab setup of something like ELK or Splunk. 
 
 ## Files/Scripts/Commands
 
-1. [Domain Password Spray from @dafthack] (https://github.com/dafthack/DomainPasswordSpray/blob/master/DomainPasswordSpray.ps1)
+1. [Domain Password Spray from @dafthack](https://github.com/dafthack/DomainPasswordSpray/blob/master/DomainPasswordSpray.ps1)
 _ Right-click, run powershell as admin
 ```
 CD *directory that you've cloned the powershell script into*
@@ -36,11 +43,12 @@ Add-ADGroupMember -Identity “Domain Admins” -Members hplovecraft
 ```
 3. Data Exfil & Network Forensics
 
+
 4. Lateral Movement
-- Psexec add user to another server
+- Psexec add user to another host
 ```
 CD into psexec directory
-psexec.exe \\MagicRainbowPC.forgottenforest.local -u DNDUser1 -p passwordhere cmd
+psexec.exe \\MagicRainbowPC.domain.local -u DNDUser -p passwordhere cmd
 net user MyNewUser MyPassword#@$ /add
 net localgroup administrators MyNewUser /add
 ```

@@ -10,7 +10,7 @@ _Prod? (j/k)
 
 ### 1. Windows Domain Controller
 - Specs
-_ supported OS version
+_supported OS version
 _ 
 
 ### 2. Windows Endpoint

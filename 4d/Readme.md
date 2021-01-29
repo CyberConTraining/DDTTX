@@ -27,7 +27,7 @@ Intermediate knowledge of Windows and Linux systems.
 - Software capable of reading standard documents (MS Office, Google Drive, LibreOffice, etc.)
 - Optional: Unicorn
 
-###Optional for Lab Hands-On: 
+### Optional for Lab Hands-On: 
   See Environment setup here: https://github.com/CyberConTraining/DDTTX
 
 ## WHAT STUDENTS WILL BE PROVIDED WITH

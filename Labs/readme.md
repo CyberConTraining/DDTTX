@@ -2,16 +2,16 @@
 
 ## Infrastructure
 - Your infrastructure can really be hosted anywhere.
-_Locally via vmware, virtualbox, etc
-_In the cloud via Azure, GCP, AWS
-_Prod? (j/k)
+  - Locally via vmware, virtualbox, etc
+  - In the cloud via Azure, GCP, AWS
+  - Prod? (j/k)
 
 - They should be in all the same network 
 
 ### 1. Windows Domain Controller
 - Specs
-_supported OS version
-_ 
+  - supported OS version
+  -
 
 ### 2. Windows Endpoint
 - Joined to above domain
@@ -23,7 +23,7 @@ In my case you will see in the demos that I'm using a Blumira sensor. This is an
 ## Files/Scripts/Commands
 
 1. [Domain Password Spray from @dafthack](https://github.com/dafthack/DomainPasswordSpray/blob/master/DomainPasswordSpray.ps1)
-_ Right-click, run powershell as admin
+   - Right-click, run powershell as admin
 ```
 CD *directory that you've cloned the powershell script into*
 Get-ExecutionPolicy

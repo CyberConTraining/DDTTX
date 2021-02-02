@@ -1,4 +1,5 @@
 # Lab Setup
+For more setup scripts and cool stuff, check out the fork of https://github.com/CyberConTraining/LogDetectionLab by @BoredHackerBlog
 
 ## Infrastructure
 - Your infrastructure can really be hosted anywhere.

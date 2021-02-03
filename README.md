@@ -1,2 +1,2 @@
 # DDTTX
-D&amp;D Tabletop Trainings
+DDTTX Tabletop Trainings

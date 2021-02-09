@@ -1,6 +1,10 @@
 # DDTTX
 DDTTX Tabletop Trainings
 
+4 Day Training - https://github.com/CyberConTraining/DDTTX/tree/main/4d
+
+Lab documentation - https://github.com/CyberConTraining/DDTTX/tree/main/Labs
+
 
 Promo video - https://youtu.be/OOeNoawr3wk
 

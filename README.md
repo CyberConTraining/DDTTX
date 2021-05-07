@@ -5,6 +5,8 @@ DDTTX Tabletop Trainings
 
 Lab documentation - https://github.com/CyberConTraining/DDTTX/tree/main/Labs
 
+Webcast & Training Share - https://drive.google.com/drive/folders/1fJo76pjCVIcO04lDImgrZOiHaQUbup-u?usp=sharing
+
 
 Promo video - https://youtu.be/OOeNoawr3wk
 
